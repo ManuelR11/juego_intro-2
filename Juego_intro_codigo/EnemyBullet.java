@@ -30,12 +30,12 @@ public class EnemyBullet extends Actor
             getWorld().removeObject(s);
             getWorld().removeObject(this);
             Greenfoot.playSound("Explosion+3.wav");
+            Greenfoot.delay(10);
+            Greenfoot.setWorld(new EndGameScreen());
         }
         else if (getY() > 390)
         {
             getWorld().removeObject(this);
-            Greenfoot.delay(10);
-            Greenfoot.setWorld(new EndGameScreen());
         }
     }    
 }
